@@ -1,0 +1,102 @@
+body {
+    background-color: #c3f7ee;
+    text-align: center;
+    font-family: '思源黑體', sans-serif;
+    animation: backgroundAnimation 10s infinite alternate;
+  }
+
+  h1, h2 {
+    color: #83c9f2;
+    font-family: '思源黑體', sans-serif;
+  }
+
+  .font1 {
+    color: #2f7096;
+  }
+
+.font2{
+  color: #89cffa;
+  font-size:24px;
+}
+
+  .font3 {
+    color: #83c9f2;
+    font-size: 24px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  #ico {
+    width: 300px;
+    border-radius: 15px;
+    transition: transform 0.5s ease;
+  }
+
+  #ico:hover {
+    transform: scale(1.1);
+  } .interest-container {
+    display: flex;
+    flex-direction: column; /* 讓項目垂直排列 */
+    align-items: center; /* 水平居中 */
+    text-align: center; /* 讓文字在每個元素內居中 */
+    margin: 10px 0;
+  }
+
+  .static, .relative, .interest {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+
+  .static {
+    animation: fadeIn 2s ease-in-out;
+  }
+
+  .relative {
+    position: relative;
+    left: -20px;
+    animation: slideInLeft 2s ease-in-out forwards;
+  }
+
+  .interest {
+    font-size: 20px;
+    margin: 10px 0;
+    transform: translateX(100px); /* 初始化在右側 */
+    animation: slideInRight 2s ease-in-out forwards; /* 從右滑入動畫 */
+  }
+
+  @keyframes slideInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(100px); /* 從右滑入 */
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0); /* 停止在原位 */
+    }
+  }
+
+  @keyframes slideInLeft {
+    0% {
+      opacity: 0;
+      left: -100px;
+    }
+    100% {
+      opacity: 1;
+      left: 0;
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
